@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-var url string = "http://localhost:3000"
+var url string = "http://localhost:30001"
 
 func SendPost(uri string, data string) ([]byte, error) {
 	reqBody := bytes.NewBufferString(data)
