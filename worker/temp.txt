@@ -1,0 +1,2664 @@
+db connect success
+
+2024/05/03 12:03:20 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[0.578ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2024/05/03 12:03:20 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[3.834ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'STEAMPIPE_DB%' ORDER BY SCHEMA_NAME='STEAMPIPE_DB' DESC,SCHEMA_NAME limit 1
+
+2024/05/03 12:03:20 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[4.463ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'STEAMPIPE_DB' AND table_name = 'ad_groups' AND table_type = 'BASE TABLE'
+
+2024/05/03 12:03:20 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[0.828ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2024/05/03 12:03:20 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[2.998ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'STEAMPIPE_DB%' ORDER BY SCHEMA_NAME='STEAMPIPE_DB' DESC,SCHEMA_NAME limit 1
+
+2024/05/03 12:03:20 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[3.801ms] [34;1m[rows:-][0m SELECT * FROM `ad_groups` LIMIT 1
+
+2024/05/03 12:03:20 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[6.125ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'STEAMPIPE_DB' AND table_name = 'ad_groups' ORDER BY ORDINAL_POSITION
+JSON Output: {
+ "rows": [
+  {
+   "department": "프로덕트팀 | 기획파트",
+   "display_name": "서찬우",
+   "mail": "chanwoo.seo@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김다정",
+   "mail": "dj92.kim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "SLDT_Admin",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f564c23b-16da-4451-8808-bdd80b7db0ef"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "aab315d3-5112-4d01-84c8-2c67796047c6"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김선주",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "하찬욱",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "002dd151-36c8-4806-90c6-cbcd0586ff2b"
+    }
+   ]
+  },
+  {
+   "department": "서비스개발팀 / 전시컨텐츠파트",
+   "display_name": "심재혁",
+   "mail": "jaehyuk.shim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "357f7e77-7ab8-467c-b710-2d754da15948"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "조승현",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "정철영",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김 동현",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": null,
+   "display_name": "장수민",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "QA파트",
+   "display_name": "전해인",
+   "mail": "hi.jeon@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": "QA 파트",
+   "display_name": "김나영",
+   "mail": "nykim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김지훈",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "Front-End파트",
+   "display_name": "조보화",
+   "mail": "jbh@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "30054dca-451f-4e79-ae74-43bfe505f7fa"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김지범",
+   "mail": "jibeom.kim@hashicorp.com",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "693b25e4-3a54-48f8-9d0f-fc83b92ddb4e"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "지승연",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "ca7b976d-8216-48b3-a37c-3931b0729456"
+    }
+   ]
+  },
+  {
+   "department": "서비스개발팀 / 상품검색파트",
+   "display_name": "오정묵",
+   "mail": "ojmok@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "00585585-ad15-43ce-9fea-76391d1769f2"
+    }
+   ]
+  },
+  {
+   "department": "프로덕트팀 | QA파트",
+   "display_name": "고충신",
+   "mail": "chungshin.ko@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "곽연지",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "전시컨텐츠 파트",
+   "display_name": "양동신",
+   "mail": "dongshinyang@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "7da396e6-6a7d-40c5-b67c-0884824d242f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "357f7e77-7ab8-467c-b710-2d754da15948"
+    }
+   ]
+  },
+  {
+   "department": "서비스개발팀",
+   "display_name": "김호석",
+   "mail": "hskim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cf1637ce-d077-49b1-ab49-1a97b21dfb49"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "35fa7a97-e4d4-48c3-9765-dda2a8053934"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "a202c582-a412-4994-99d5-7b4050f95b4f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "bf5ed2e7-3a39-4310-bc89-871707d94766"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "b7373fc8-68a1-4891-9e6c-1e2e9c32c017"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cff7ab5a-e77c-4400-83f4-1cdac9450e54"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "박성희",
+   "mail": "sunghee.park@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김윤희",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "ca7b976d-8216-48b3-a37c-3931b0729456"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "박주현",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "임현수",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "어지철",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "커머스개발팀",
+   "display_name": "서광석",
+   "mail": "siriousu@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "a202c582-a412-4994-99d5-7b4050f95b4f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "7da396e6-6a7d-40c5-b67c-0884824d242f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "ca7b976d-8216-48b3-a37c-3931b0729456"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6"
+    }
+   ]
+  },
+  {
+   "department": "경영지원파트",
+   "display_name": "정대철",
+   "mail": "daechul.chung@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": "전시컨텐츠 파트",
+   "display_name": "이두화",
+   "mail": "doohwa.lee@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cf1637ce-d077-49b1-ab49-1a97b21dfb49"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "a202c582-a412-4994-99d5-7b4050f95b4f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "bf5ed2e7-3a39-4310-bc89-871707d94766"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "357f7e77-7ab8-467c-b710-2d754da15948"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6"
+    }
+   ]
+  },
+  {
+   "department": "엔지니어",
+   "display_name": "윤소연(liz.yun)",
+   "mail": "liz.yun@spintech.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f564c23b-16da-4451-8808-bdd80b7db0ef"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "황선호",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "982ff523-5408-41c1-a4a2-af0f0fd62699"
+    },
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f0d9ae59-42de-4a70-96cc-ec36f84bc429"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "이다은",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "길성철",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "douzone",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "e2b6ce4e-150c-44f9-8e5b-8371a8b9b4f5"
+    }
+   ]
+  },
+  {
+   "department": "시스템보안 파트",
+   "display_name": "홍정희",
+   "mail": "jh@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f564c23b-16da-4451-8808-bdd80b7db0ef"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cdc014ea-9f3c-4fdb-a3cd-74ab3725c2e8"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "aab315d3-5112-4d01-84c8-2c67796047c6"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cff7ab5a-e77c-4400-83f4-1cdac9450e54"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "박경민",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "심혜리",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": "기획파트",
+   "display_name": "정다운",
+   "mail": "du.jung@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": "iOS파트",
+   "display_name": "황반석",
+   "mail": "peter@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "913fafdf-97b0-485a-ad54-903d4704a82a"
+    }
+   ]
+  },
+  {
+   "department": "시스템팀",
+   "display_name": "홍정희",
+   "mail": "jh@x2soft.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f564c23b-16da-4451-8808-bdd80b7db0ef"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cdc014ea-9f3c-4fdb-a3cd-74ab3725c2e8"
+    }
+   ]
+  },
+  {
+   "department": "프론트엔드 파트",
+   "display_name": "김주리",
+   "mail": "julee.kim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "30054dca-451f-4e79-ae74-43bfe505f7fa"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "양나래",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": null,
+   "display_name": "장세준",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "조진호",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김다솜",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": null,
+   "display_name": "김형준",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "프론트 개발팀 | Android 파트",
+   "display_name": "김정민",
+   "mail": "kjm0909@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "e50e5b07-f456-4a85-b062-43b012b40b70"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "강승훈",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": null,
+   "display_name": "정주리",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "민성아",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": "프로덕트팀 / 기획파트",
+   "display_name": "남지영",
+   "mail": "jiyoung.nam@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "soldout_dev",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "구민하",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "iOS파트",
+   "display_name": "이현규",
+   "mail": "hyunkyu.lee@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "913fafdf-97b0-485a-ad54-903d4704a82a"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "신희운",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "윤정희",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "박성호",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "상품검색 파트",
+   "display_name": "김형일",
+   "mail": "hyungil.kim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cf1637ce-d077-49b1-ab49-1a97b21dfb49"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "a202c582-a412-4994-99d5-7b4050f95b4f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "bf5ed2e7-3a39-4310-bc89-871707d94766"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "b7373fc8-68a1-4891-9e6c-1e2e9c32c017"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "00585585-ad15-43ce-9fea-76391d1769f2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "jh",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "장소연",
+   "mail": "soyeon.jang@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "devops_account",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "2831b6e8-9be2-4d37-84c8-63376fb4cab2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "양성태",
+   "mail": "sungtae.yang@hashicorp.com",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "693b25e4-3a54-48f8-9d0f-fc83b92ddb4e"
+    }
+   ]
+  },
+  {
+   "department": "서비스개발팀 시스템보안파트",
+   "display_name": "구민준",
+   "mail": "mj.koo@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f564c23b-16da-4451-8808-bdd80b7db0ef"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cdc014ea-9f3c-4fdb-a3cd-74ab3725c2e8"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3d0c2f86-5023-441e-82e0-68c7fdb6c1bd"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cff7ab5a-e77c-4400-83f4-1cdac9450e54"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "이진용",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": "Android파트",
+   "display_name": "김부식",
+   "mail": "busik.kim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "e50e5b07-f456-4a85-b062-43b012b40b70"
+    }
+   ]
+  },
+  {
+   "department": "Front-End파트",
+   "display_name": "여상희",
+   "mail": "shyeo@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "30054dca-451f-4e79-ae74-43bfe505f7fa"
+    }
+   ]
+  },
+  {
+   "department": "프로덕트팀/플랫폼디자인파트",
+   "display_name": "박난주",
+   "mail": "nanju.park@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": "프로덕트실",
+   "display_name": "장서현",
+   "mail": "seohyun.jang@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김명희",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": "디자인파트",
+   "display_name": "정은영",
+   "mail": "eunyoung.jeong@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": "경영지원팀/인사총무파트",
+   "display_name": "조성용",
+   "mail": "seongyong.cho@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "한규남",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "커머스개발팀",
+   "display_name": "신희효",
+   "mail": "heehyo.shin@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "b7373fc8-68a1-4891-9e6c-1e2e9c32c017"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "7da396e6-6a7d-40c5-b67c-0884824d242f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "ca7b976d-8216-48b3-a37c-3931b0729456"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김형빈",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": "기획파트",
+   "display_name": "안준효",
+   "mail": "junehyo.an@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": "iOS파트",
+   "display_name": "김광섭",
+   "mail": "kwangsub.kim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "913fafdf-97b0-485a-ad54-903d4704a82a"
+    }
+   ]
+  },
+  {
+   "department": "Front-End파트",
+   "display_name": "이소정",
+   "mail": "sojeong.lee@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "30054dca-451f-4e79-ae74-43bfe505f7fa"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "박민환",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": null,
+   "display_name": "이지선",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "조아라B",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "시스템팀",
+   "display_name": "서인석",
+   "mail": "isseo@x2soft.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f564c23b-16da-4451-8808-bdd80b7db0ef"
+    }
+   ]
+  },
+  {
+   "department": "시스템보안 파트",
+   "display_name": "서인석",
+   "mail": "is.seo@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f564c23b-16da-4451-8808-bdd80b7db0ef"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cdc014ea-9f3c-4fdb-a3cd-74ab3725c2e8"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cff7ab5a-e77c-4400-83f4-1cdac9450e54"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "박주홍",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": null,
+   "display_name": "정훈교",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "커머스개발팀",
+   "display_name": "윤명수",
+   "mail": "myungsoo.yun@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "35fa7a97-e4d4-48c3-9765-dda2a8053934"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "357f7e77-7ab8-467c-b710-2d754da15948"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "ca7b976d-8216-48b3-a37c-3931b0729456"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6"
+    }
+   ]
+  },
+  {
+   "department": "서비스개발팀 / 전시콘텐츠파트",
+   "display_name": "한진호",
+   "mail": "jinho.han@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "bf5ed2e7-3a39-4310-bc89-871707d94766"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "75665240-e1f3-4dff-a51e-d09fcddcce95"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "이동환",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김민석",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "Cloud Expert Group A",
+   "display_name": "양상석(chris.yang)",
+   "mail": "chris.yang@spintech.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "81707d0b-7787-4751-9ec2-e08dae1d4e24"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김정원",
+   "mail": null,
+   "member_of": []
+  },
+  {
+   "department": "전시컨텐츠 파트",
+   "display_name": "최시진",
+   "mail": "sijin.choi@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "bf5ed2e7-3a39-4310-bc89-871707d94766"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "357f7e77-7ab8-467c-b710-2d754da15948"
+    }
+   ]
+  },
+  {
+   "department": "커머스개발팀",
+   "display_name": "조세영",
+   "mail": "forever.young@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "cf1637ce-d077-49b1-ab49-1a97b21dfb49"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "bf5ed2e7-3a39-4310-bc89-871707d94766"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "7da396e6-6a7d-40c5-b67c-0884824d242f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "ca7b976d-8216-48b3-a37c-3931b0729456"
+    }
+   ]
+  },
+  {
+   "department": "신규사업팀",
+   "display_name": "노진우",
+   "mail": "la8119@x2soft.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f564c23b-16da-4451-8808-bdd80b7db0ef"
+    }
+   ]
+  },
+  {
+   "department": "Android파트",
+   "display_name": "방혜연",
+   "mail": "hy.b@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "e50e5b07-f456-4a85-b062-43b012b40b70"
+    }
+   ]
+  },
+  {
+   "department": "주문회원 파트",
+   "display_name": "이규훈",
+   "mail": "kyuhun.lee@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "ca7b976d-8216-48b3-a37c-3931b0729456"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "Azure",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "39663633-0863-49e8-8cca-4a9bd4537cf2"
+    }
+   ]
+  },
+  {
+   "department": "프론트엔드 파트",
+   "display_name": "김재형",
+   "mail": "jaehyeong.kim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "30054dca-451f-4e79-ae74-43bfe505f7fa"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "나지훈",
+   "mail": "jihun.na@hashicorp.com",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "693b25e4-3a54-48f8-9d0f-fc83b92ddb4e"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "오상환",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "경영지원파트",
+   "display_name": "김화영",
+   "mail": "khy@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": "BX디자인 파트",
+   "display_name": "김여진",
+   "mail": "yeojin.kim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "김용문",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "72a7125a-223e-4bc6-82ae-fcf7db9c262e"
+    }
+   ]
+  },
+  {
+   "department": "상품검색 파트",
+   "display_name": "김영준",
+   "mail": "z3986316@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "bf5ed2e7-3a39-4310-bc89-871707d94766"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "00585585-ad15-43ce-9fea-76391d1769f2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "오예슬",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "정윤지",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "상품검색 파트",
+   "display_name": "장윤상",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "bf5ed2e7-3a39-4310-bc89-871707d94766"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "00585585-ad15-43ce-9fea-76391d1769f2"
+    }
+   ]
+  },
+  {
+   "department": "서비스개발팀 / 시스템보안파트",
+   "display_name": "최성웅",
+   "mail": "sw.choi@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "688ab32f-33c2-4c63-b8c6-e0b271b2eba9"
+    },
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "982ff523-5408-41c1-a4a2-af0f0fd62699"
+    },
+    {
+     "@odata.type": "#microsoft.graph.directoryRole",
+     "id": "f0d9ae59-42de-4a70-96cc-ec36f84bc429"
+    }
+   ]
+  },
+  {
+   "department": "상품검색 파트",
+   "display_name": "채영준",
+   "mail": null,
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "7da396e6-6a7d-40c5-b67c-0884824d242f"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "00585585-ad15-43ce-9fea-76391d1769f2"
+    }
+   ]
+  },
+  {
+   "department": "상품기획 파트",
+   "display_name": "강우석",
+   "mail": "wooseok.kang@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    }
+   ]
+  },
+  {
+   "department": "Front-End파트",
+   "display_name": "김태헌",
+   "mail": "thkim@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "3fb620f3-875a-4a5e-8886-20526aae74ee"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "30054dca-451f-4e79-ae74-43bfe505f7fa"
+    }
+   ]
+  },
+  {
+   "department": null,
+   "display_name": "이선웅",
+   "mail": "sunwoong.lee@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    }
+   ]
+  },
+  {
+   "department": "커머스개발팀",
+   "display_name": "서원규",
+   "mail": "wongyu.seo@soldout.co.kr",
+   "member_of": [
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "48ef0d04-bb8d-4a42-b30a-2e0b3df864c2"
+    },
+    {
+     "@odata.type": "#microsoft.graph.group",
+     "id": "ca7b976d-8216-48b3-a37c-3931b0729456"
+    }
+   ]
+  }
+ ],
+ "metadata": null
+}
+
+db connect success
+
+2024/05/03 12:08:26 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[1.480ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2024/05/03 12:08:26 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[7.568ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'STEAMPIPE_DB%' ORDER BY SCHEMA_NAME='STEAMPIPE_DB' DESC,SCHEMA_NAME limit 1
+
+2024/05/03 12:08:26 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[3.287ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'STEAMPIPE_DB' AND table_name = 'ad_groups' AND table_type = 'BASE TABLE'
+
+2024/05/03 12:08:26 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[0.665ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2024/05/03 12:08:26 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[3.545ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'STEAMPIPE_DB%' ORDER BY SCHEMA_NAME='STEAMPIPE_DB' DESC,SCHEMA_NAME limit 1
+
+2024/05/03 12:08:26 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[3.427ms] [34;1m[rows:-][0m SELECT * FROM `ad_groups` LIMIT 1
+
+2024/05/03 12:08:26 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[6.189ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'STEAMPIPE_DB' AND table_name = 'ad_groups' ORDER BY ORDINAL_POSITION
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[3.531ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 조아라B, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.412ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 정훈교, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.269ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.421ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.307ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cf1637ce-d077-49b1-ab49-1a97b21dfb49' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.160ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'bf5ed2e7-3a39-4310-bc89-871707d94766' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.083ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '7da396e6-6a7d-40c5-b67c-0884824d242f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.843ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'ca7b976d-8216-48b3-a37c-3931b0729456' ORDER BY `group_infos`.`id` LIMIT 1
+User: 조세영, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.157ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.161ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '39663633-0863-49e8-8cca-4a9bd4537cf2' ORDER BY `group_infos`.`id` LIMIT 1
+User: Azure, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.044ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.906ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'aab315d3-5112-4d01-84c8-2c67796047c6' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.969ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: SLDT_Admin, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.892ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '2831b6e8-9be2-4d37-84c8-63376fb4cab2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.650ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: devops_account, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.617ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.700ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.593ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'e50e5b07-f456-4a85-b062-43b012b40b70' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김부식, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.631ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.636ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.604ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '002dd151-36c8-4806-90c6-cbcd0586ff2b' ORDER BY `group_infos`.`id` LIMIT 1
+User: 하찬욱, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.594ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.610ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.573ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cf1637ce-d077-49b1-ab49-1a97b21dfb49' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.665ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'a202c582-a412-4994-99d5-7b4050f95b4f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[1.052ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'bf5ed2e7-3a39-4310-bc89-871707d94766' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.809ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '357f7e77-7ab8-467c-b710-2d754da15948' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.601ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6' ORDER BY `group_infos`.`id` LIMIT 1
+User: 이두화, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.632ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.469ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.704ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '30054dca-451f-4e79-ae74-43bfe505f7fa' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김주리, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.572ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.574ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 정다운, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.444ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김선주, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.525ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 한규남, Groups: 
+User: 민성아, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.466ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.436ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 고충신, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.454ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.500ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'ca7b976d-8216-48b3-a37c-3931b0729456' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김윤희, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.437ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.449ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 정대철, Groups: 
+User: 김 동현, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.413ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 정철영, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.427ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.466ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 전해인, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.530ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.443ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.459ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'b7373fc8-68a1-4891-9e6c-1e2e9c32c017' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.419ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '7da396e6-6a7d-40c5-b67c-0884824d242f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.553ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'ca7b976d-8216-48b3-a37c-3931b0729456' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.428ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6' ORDER BY `group_infos`.`id` LIMIT 1
+User: 신희효, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.389ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.401ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cdc014ea-9f3c-4fdb-a3cd-74ab3725c2e8' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.400ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'aab315d3-5112-4d01-84c8-2c67796047c6' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.383ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.439ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cff7ab5a-e77c-4400-83f4-1cdac9450e54' ORDER BY `group_infos`.`id` LIMIT 1
+User: 홍정희, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.365ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 이동환, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.366ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.359ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '7da396e6-6a7d-40c5-b67c-0884824d242f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.393ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '357f7e77-7ab8-467c-b710-2d754da15948' ORDER BY `group_infos`.`id` LIMIT 1
+User: 양동신, Groups: 
+User: 김다솜, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.376ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.378ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '357f7e77-7ab8-467c-b710-2d754da15948' ORDER BY `group_infos`.`id` LIMIT 1
+User: 심재혁, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.380ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 서찬우, Groups: 
+User: 김정원, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.355ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 곽연지, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.396ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.488ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 정은영, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.390ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `group_infos`.`id` LIMIT 1
+User: 서인석, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.345ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김다정, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.503ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.390ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.434ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '913fafdf-97b0-485a-ad54-903d4704a82a' ORDER BY `group_infos`.`id` LIMIT 1
+User: 이현규, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.374ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김형준, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.375ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.374ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.364ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cf1637ce-d077-49b1-ab49-1a97b21dfb49' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.472ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '35fa7a97-e4d4-48c3-9765-dda2a8053934' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.323ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'a202c582-a412-4994-99d5-7b4050f95b4f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.387ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'bf5ed2e7-3a39-4310-bc89-871707d94766' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.345ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'b7373fc8-68a1-4891-9e6c-1e2e9c32c017' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.370ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cff7ab5a-e77c-4400-83f4-1cdac9450e54' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김호석, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.298ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 장세준, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.308ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.401ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cdc014ea-9f3c-4fdb-a3cd-74ab3725c2e8' ORDER BY `group_infos`.`id` LIMIT 1
+User: 홍정희, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.431ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.380ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김화영, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.357ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.345ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cdc014ea-9f3c-4fdb-a3cd-74ab3725c2e8' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.425ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.370ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.344ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cff7ab5a-e77c-4400-83f4-1cdac9450e54' ORDER BY `group_infos`.`id` LIMIT 1
+User: 서인석, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.365ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.361ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.402ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '30054dca-451f-4e79-ae74-43bfe505f7fa' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김재형, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.421ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.361ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '982ff523-5408-41c1-a4a2-af0f0fd62699' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.373ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f0d9ae59-42de-4a70-96cc-ec36f84bc429' ORDER BY `group_infos`.`id` LIMIT 1
+User: 황선호, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.399ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '81707d0b-7787-4751-9ec2-e08dae1d4e24' ORDER BY `group_infos`.`id` LIMIT 1
+User: 양상석(chris.yang), Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.423ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.343ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 장서현, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.335ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: jh, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.366ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김민석, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.323ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.333ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.354ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cf1637ce-d077-49b1-ab49-1a97b21dfb49' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.397ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'a202c582-a412-4994-99d5-7b4050f95b4f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.361ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'bf5ed2e7-3a39-4310-bc89-871707d94766' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.442ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'b7373fc8-68a1-4891-9e6c-1e2e9c32c017' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.363ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '00585585-ad15-43ce-9fea-76391d1769f2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.329ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김형일, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.323ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.418ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 안준효, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.359ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.333ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.352ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'e50e5b07-f456-4a85-b062-43b012b40b70' ORDER BY `group_infos`.`id` LIMIT 1
+User: 방혜연, Groups: 
+User: 이진용, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.352ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 이지선, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.419ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.385ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.332ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'e50e5b07-f456-4a85-b062-43b012b40b70' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김정민, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.357ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 남지영, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.362ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 윤정희, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.357ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 이다은, Groups: 
+User: 김형빈, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.360ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '693b25e4-3a54-48f8-9d0f-fc83b92ddb4e' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김지범, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.333ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 박주현, Groups: 
+User: 박주홍, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.342ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 길성철, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.547ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.320ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.425ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '913fafdf-97b0-485a-ad54-903d4704a82a' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김광섭, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.407ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김지훈, Groups: 
+User: 심혜리, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.431ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.330ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.305ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '30054dca-451f-4e79-ae74-43bfe505f7fa' ORDER BY `group_infos`.`id` LIMIT 1
+User: 이소정, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.307ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 조진호, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.313ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.289ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.327ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '30054dca-451f-4e79-ae74-43bfe505f7fa' ORDER BY `group_infos`.`id` LIMIT 1
+User: 조보화, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.308ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.282ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'ca7b976d-8216-48b3-a37c-3931b0729456' ORDER BY `group_infos`.`id` LIMIT 1
+User: 이규훈, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.286ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 장수민, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.279ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.270ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'bf5ed2e7-3a39-4310-bc89-871707d94766' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.297ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '75665240-e1f3-4dff-a51e-d09fcddcce95' ORDER BY `group_infos`.`id` LIMIT 1
+User: 한진호, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.267ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '693b25e4-3a54-48f8-9d0f-fc83b92ddb4e' ORDER BY `group_infos`.`id` LIMIT 1
+User: 나지훈, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.275ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 어지철, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.298ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 장소연, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.345ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.308ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 조성용, Groups: 
+User: 양나래, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.353ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `group_infos`.`id` LIMIT 1
+User: 노진우, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.328ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 박성호, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.312ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 신희운, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.295ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 임현수, Groups: 
+User: 강승훈, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.317ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `group_infos`.`id` LIMIT 1
+User: 윤소연(liz.yun), Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.329ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.298ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'e2b6ce4e-150c-44f9-8e5b-8371a8b9b4f5' ORDER BY `group_infos`.`id` LIMIT 1
+User: douzone, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.298ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.315ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 박난주, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.300ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '693b25e4-3a54-48f8-9d0f-fc83b92ddb4e' ORDER BY `group_infos`.`id` LIMIT 1
+User: 양성태, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.265ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 구민하, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.306ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 조승현, Groups: 
+User: 박민환, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.305ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.311ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cdc014ea-9f3c-4fdb-a3cd-74ab3725c2e8' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.363ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.309ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3d0c2f86-5023-441e-82e0-68c7fdb6c1bd' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.313ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'cff7ab5a-e77c-4400-83f4-1cdac9450e54' ORDER BY `group_infos`.`id` LIMIT 1
+User: 구민준, Groups: 
+User: 김명희, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.376ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.372ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '35fa7a97-e4d4-48c3-9765-dda2a8053934' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.331ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '357f7e77-7ab8-467c-b710-2d754da15948' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.335ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'ca7b976d-8216-48b3-a37c-3931b0729456' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.316ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6' ORDER BY `group_infos`.`id` LIMIT 1
+User: 윤명수, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.414ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.315ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김나영, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.316ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.365ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'ca7b976d-8216-48b3-a37c-3931b0729456' ORDER BY `group_infos`.`id` LIMIT 1
+User: 지승연, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.348ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 정주리, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.351ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 박성희, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.418ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: soldout_dev, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.361ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.342ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.351ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '913fafdf-97b0-485a-ad54-903d4704a82a' ORDER BY `group_infos`.`id` LIMIT 1
+User: 황반석, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.315ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.313ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '00585585-ad15-43ce-9fea-76391d1769f2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 오정묵, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.297ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 오상환, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.301ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.291ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.340ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '30054dca-451f-4e79-ae74-43bfe505f7fa' ORDER BY `group_infos`.`id` LIMIT 1
+User: 여상희, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.373ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 박경민, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.434ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.364ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.295ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'a202c582-a412-4994-99d5-7b4050f95b4f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.297ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '7da396e6-6a7d-40c5-b67c-0884824d242f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.293ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'ca7b976d-8216-48b3-a37c-3931b0729456' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.300ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'fa060bd0-f886-4aa5-b6cf-8d13d2a3f9e6' ORDER BY `group_infos`.`id` LIMIT 1
+User: 서광석, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.332ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.269ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.289ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'bf5ed2e7-3a39-4310-bc89-871707d94766' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.362ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '357f7e77-7ab8-467c-b710-2d754da15948' ORDER BY `group_infos`.`id` LIMIT 1
+User: 최시진, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.356ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 이선웅, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.334ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.359ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김여진, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.329ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.304ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '72a7125a-223e-4bc6-82ae-fcf7db9c262e' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김용문, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.279ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.328ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.317ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'bf5ed2e7-3a39-4310-bc89-871707d94766' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.310ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '00585585-ad15-43ce-9fea-76391d1769f2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김영준, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.357ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 정윤지, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.406ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.393ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'ca7b976d-8216-48b3-a37c-3931b0729456' ORDER BY `group_infos`.`id` LIMIT 1
+User: 서원규, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.342ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.310ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+User: 강우석, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.347ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 오예슬, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.291ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.398ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '3fb620f3-875a-4a5e-8886-20526aae74ee' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.334ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '30054dca-451f-4e79-ae74-43bfe505f7fa' ORDER BY `group_infos`.`id` LIMIT 1
+User: 김태헌, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.379ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.317ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '7da396e6-6a7d-40c5-b67c-0884824d242f' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.313ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '00585585-ad15-43ce-9fea-76391d1769f2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 채영준, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.380ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.372ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'bf5ed2e7-3a39-4310-bc89-871707d94766' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.387ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '00585585-ad15-43ce-9fea-76391d1769f2' ORDER BY `group_infos`.`id` LIMIT 1
+User: 장윤상, Groups: 
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.300ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '48ef0d04-bb8d-4a42-b30a-2e0b3df864c2' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.329ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '688ab32f-33c2-4c63-b8c6-e0b271b2eba9' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.348ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = '982ff523-5408-41c1-a4a2-af0f0fd62699' ORDER BY `group_infos`.`id` LIMIT 1
+
+2024/05/03 12:08:28 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mError 1146 (42S02): Table 'STEAMPIPE_DB.group_infos' doesn't exist
+[0m[33m[0.335ms] [34;1m[rows:0][0m SELECT * FROM `group_infos` WHERE id = 'f0d9ae59-42de-4a70-96cc-ec36f84bc429' ORDER BY `group_infos`.`id` LIMIT 1
+User: 최성웅, Groups: 
+db connect success
+
+2024/05/03 12:10:13 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[0.611ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2024/05/03 12:10:13 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[2.748ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'STEAMPIPE_DB%' ORDER BY SCHEMA_NAME='STEAMPIPE_DB' DESC,SCHEMA_NAME limit 1
+
+2024/05/03 12:10:13 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[4.015ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'STEAMPIPE_DB' AND table_name = 'ad_groups' AND table_type = 'BASE TABLE'
+
+2024/05/03 12:10:13 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[0.745ms] [34;1m[rows:-][0m SELECT DATABASE()
+
+2024/05/03 12:10:13 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[3.406ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'STEAMPIPE_DB%' ORDER BY SCHEMA_NAME='STEAMPIPE_DB' DESC,SCHEMA_NAME limit 1
+
+2024/05/03 12:10:13 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[2.285ms] [34;1m[rows:-][0m SELECT * FROM `ad_groups` LIMIT 1
+
+2024/05/03 12:10:13 [32m/Users/cubus/cubus/git/sldt_cspm/worker/config/dbConnection.go:34
+[0m[33m[5.849ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'STEAMPIPE_DB' AND table_name = 'ad_groups' ORDER BY ORDINAL_POSITION
+User: 조아라B, Groups: 엑스투소프트
+User: 정훈교, Groups: 엑스투소프트
+User: 조세영, Groups: 엑스투소프트, Office365_User, Storage RW, Backend #2 Part User, Backend #1 Part User, [서비스개발팀] 커머스개발팀
+User: Azure, Groups: 엑스투소프트, [SLDT] Image Uploader
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[1.738ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `ad_groups`.`id` LIMIT 1
+User: SLDT_Admin, Groups: All Company, 엑스투소프트
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.904ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = '2831b6e8-9be2-4d37-84c8-63376fb4cab2' ORDER BY `ad_groups`.`id` LIMIT 1
+User: devops_account, Groups: 엑스투소프트
+User: 김부식, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 안드로이드 파트
+User: 하찬욱, Groups: 엑스투소프트, [SLDT] Kubernetes Admin, [SLDT] 파트너시스템TF
+User: 이두화, Groups: 엑스투소프트, Office365_User, Storage RW, AKS-Test&Stage-Group, Backend #2 Part User, [서비스개발팀] 회원컨텐츠 파트, [SLDT] Kubernetes Admin
+User: 김주리, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 프론트엔드 파트
+User: 정다운, Groups: 엑스투소프트, Office365_User
+User: 김선주, Groups: 엑스투소프트
+User: 한규남, Groups: 엑스투소프트
+User: 민성아, Groups: 
+User: 고충신, Groups: 엑스투소프트, Office365_User
+User: 김윤희, Groups: 엑스투소프트, [서비스개발팀] 커머스개발팀
+User: 정대철, Groups: 엑스투소프트, Office365_User
+User: 김 동현, Groups: 
+User: 정철영, Groups: 엑스투소프트
+User: 전해인, Groups: 엑스투소프트, Office365_User
+User: 신희효, Groups: 엑스투소프트, Office365_User, Backend #2 Part Admin, Backend #1 Part User, [서비스개발팀] 커머스개발팀, [SLDT] Kubernetes Admin
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.964ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 홍정희, Groups: Administratrs, All Company, 엑스투소프트, [SLDT] Admin
+User: 이동환, Groups: 엑스투소프트
+User: 양동신, Groups: Office365_User, Backend #1 Part User, [서비스개발팀] 회원컨텐츠 파트
+User: 김다솜, Groups: 
+User: 심재혁, Groups: 엑스투소프트, [서비스개발팀] 회원컨텐츠 파트
+User: 서찬우, Groups: 엑스투소프트
+User: 김정원, Groups: 
+User: 곽연지, Groups: 엑스투소프트
+User: 정은영, Groups: 엑스투소프트, Office365_User
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.876ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 서인석, Groups: 
+User: 김다정, Groups: 엑스투소프트
+User: 이현규, Groups: 엑스투소프트, Office365_User, [프론트개발팀] IOS 파트
+User: 김형준, Groups: 엑스투소프트
+User: 김호석, Groups: 엑스투소프트, Office365_User, Storage RW, AKS-Production-Group, AKS-Test&Stage-Group, Backend #2 Part User, Backend #2 Part Admin, [SLDT] Admin
+User: 장세준, Groups: 엑스투소프트
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[1.225ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 홍정희, Groups: Administratrs
+User: 김화영, Groups: 엑스투소프트, Office365_User
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.898ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 서인석, Groups: Administratrs, 엑스투소프트, Office365_User, [SLDT] Admin
+User: 김재형, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 프론트엔드 파트
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[1.119ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = '982ff523-5408-41c1-a4a2-af0f0fd62699' ORDER BY `ad_groups`.`id` LIMIT 1
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[1.027ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f0d9ae59-42de-4a70-96cc-ec36f84bc429' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 황선호, Groups: 엑스투소프트
+User: 양상석(chris.yang), Groups: [MSP] 에쓰핀테크놀로지
+User: 장서현, Groups: 엑스투소프트, Office365_User
+User: jh, Groups: 엑스투소프트
+User: 김민석, Groups: 엑스투소프트
+User: 김형일, Groups: 엑스투소프트, Office365_User, Storage RW, AKS-Test&Stage-Group, Backend #2 Part User, Backend #2 Part Admin, [서비스개발팀] 상품검색 파트, [SLDT] Kubernetes Admin
+User: 안준효, Groups: 엑스투소프트, Office365_User
+User: 방혜연, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 안드로이드 파트
+User: 이진용, Groups: 
+User: 이지선, Groups: 엑스투소프트
+User: 김정민, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 안드로이드 파트
+User: 남지영, Groups: Office365_User
+User: 윤정희, Groups: 엑스투소프트
+User: 이다은, Groups: 엑스투소프트
+User: 김형빈, Groups: 
+User: 김지범, Groups: [POC] Hashicorp
+User: 박주현, Groups: 엑스투소프트
+User: 박주홍, Groups: 
+User: 길성철, Groups: 엑스투소프트
+User: 김광섭, Groups: 엑스투소프트, Office365_User, [프론트개발팀] IOS 파트
+User: 김지훈, Groups: 엑스투소프트
+User: 심혜리, Groups: 
+User: 이소정, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 프론트엔드 파트
+User: 조진호, Groups: 엑스투소프트
+User: 조보화, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 프론트엔드 파트
+User: 이규훈, Groups: 엑스투소프트, [서비스개발팀] 커머스개발팀
+User: 장수민, Groups: 엑스투소프트
+User: 한진호, Groups: 엑스투소프트, Backend #2 Part User, [플랫폼개발팀]
+User: 나지훈, Groups: [POC] Hashicorp
+User: 어지철, Groups: 엑스투소프트
+User: 장소연, Groups: 엑스투소프트
+User: 조성용, Groups: 엑스투소프트, Office365_User
+User: 양나래, Groups: 
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.542ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 노진우, Groups: 
+User: 박성호, Groups: 엑스투소프트
+User: 신희운, Groups: 엑스투소프트
+User: 임현수, Groups: 엑스투소프트
+User: 강승훈, Groups: 
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.625ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 윤소연(liz.yun), Groups: 
+User: douzone, Groups: 엑스투소프트, Local Backup Group
+User: 박난주, Groups: 엑스투소프트, Office365_User
+User: 양성태, Groups: [POC] Hashicorp
+User: 구민하, Groups: 엑스투소프트
+User: 조승현, Groups: 엑스투소프트
+User: 박민환, Groups: 
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.501ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f564c23b-16da-4451-8808-bdd80b7db0ef' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 구민준, Groups: Administratrs, 엑스투소프트, [SLDT] User, [SLDT] Admin
+User: 김명희, Groups: 
+User: 윤명수, Groups: 엑스투소프트, AKS-Production-Group, [서비스개발팀] 회원컨텐츠 파트, [서비스개발팀] 커머스개발팀, [SLDT] Kubernetes Admin
+User: 김나영, Groups: 엑스투소프트, Office365_User
+User: 지승연, Groups: 엑스투소프트, [서비스개발팀] 커머스개발팀
+User: 정주리, Groups: 엑스투소프트
+User: 박성희, Groups: 엑스투소프트
+User: soldout_dev, Groups: 엑스투소프트
+User: 황반석, Groups: 엑스투소프트, Office365_User, [프론트개발팀] IOS 파트
+User: 오정묵, Groups: 엑스투소프트, [서비스개발팀] 상품검색 파트
+User: 오상환, Groups: 엑스투소프트
+User: 여상희, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 프론트엔드 파트
+User: 박경민, Groups: 엑스투소프트
+User: 서광석, Groups: 엑스투소프트, Office365_User, AKS-Test&Stage-Group, Backend #1 Part User, [서비스개발팀] 커머스개발팀, [SLDT] Kubernetes Admin
+User: 최시진, Groups: 엑스투소프트, Office365_User, Backend #2 Part User, [서비스개발팀] 회원컨텐츠 파트
+User: 이선웅, Groups: 엑스투소프트
+User: 김여진, Groups: 엑스투소프트, Office365_User
+User: 김용문, Groups: 엑스투소프트, [프론트개발팀] 플랫폼파트
+User: 김영준, Groups: 엑스투소프트, Office365_User, Backend #2 Part User, [서비스개발팀] 상품검색 파트
+User: 정윤지, Groups: 엑스투소프트
+User: 서원규, Groups: 엑스투소프트, [서비스개발팀] 커머스개발팀
+User: 강우석, Groups: 엑스투소프트, Office365_User
+User: 오예슬, Groups: 엑스투소프트
+User: 김태헌, Groups: 엑스투소프트, Office365_User, [프론트개발팀] 프론트엔드 파트
+User: 채영준, Groups: 엑스투소프트, Backend #1 Part User, [서비스개발팀] 상품검색 파트
+User: 장윤상, Groups: 엑스투소프트, Backend #2 Part User, [서비스개발팀] 상품검색 파트
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.691ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = '688ab32f-33c2-4c63-b8c6-e0b271b2eba9' ORDER BY `ad_groups`.`id` LIMIT 1
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.623ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = '982ff523-5408-41c1-a4a2-af0f0fd62699' ORDER BY `ad_groups`.`id` LIMIT 1
+
+2024/05/03 12:10:14 [31;1m/Users/cubus/cubus/git/sldt_cspm/worker/sql.go:41 [35;1mrecord not found
+[0m[33m[0.685ms] [34;1m[rows:0][0m SELECT * FROM `ad_groups` WHERE id = 'f0d9ae59-42de-4a70-96cc-ec36f84bc429' ORDER BY `ad_groups`.`id` LIMIT 1
+User: 최성웅, Groups: 엑스투소프트
