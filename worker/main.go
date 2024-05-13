@@ -5,11 +5,14 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/joho/godotenv"
 	db "worker/config"
 	"worker/routes"
 )
 
 func main() {
+	godotenv.Load(".env")
+	//export_port := os.Getenv("EXPORT_PORT")
 	fmt.Println("Connecting to DB...")
 	db.Connection()
 
@@ -19,6 +22,6 @@ func main() {
 	routes.Setup(app)
 	//controller.GetAllUserInfo()
 
-	app.Listen(":3000")
+	app.Listen(":30001")
 
 }

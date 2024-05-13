@@ -79,10 +79,10 @@ type AzureADUserRemake struct {
 	Mail        string `json:"mail"`
 	Department  string `json:"department"`
 	//MemberOf    string `json:"member_of"`
-	MemberOf []GroupName `json:"member_of"`
+	MemberOf []string `json:"member_of"`
 }
 
 type GroupName struct {
-	ID        string `json:"id"`
+	//ID        string `json:"id"`
 	GroupName string `json:"group_name"`
 }
