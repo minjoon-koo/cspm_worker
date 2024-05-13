@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queries>
+    <Query name="getAllUsers">
+        select
+            display_name, mail, department, member_of
+        from
+            azuread_user
+    </Query>
+    <Query name="getAllGroup">
+        select
+            display_name, id , description, created_date_time, expiration_date_time
+        from
+            azuread_group
+    </Query>
+    <Query name="getDirectory_Role">
+        select
+            display_name, id
+        from
+            azuread_directory_role
+    </Query>
+
+</Queries>

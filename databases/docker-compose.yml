@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql/mysql-server:5.7  # ARM64 아키텍처를 지원하는 이미지
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sldtsre  # root 비밀번호 설정
+      MYSQL_DATABASE: STEAMPIPE_DB  # 생성할 데이터베이스
+      MYSQL_USER: sldtsre           # 사용자 이름 설정
+      MYSQL_PASSWORD: sldtsre       # 사용자 비밀번호 설정
+    ports:
+      - "3306:3306"  # 호스트와 컨테이너 포트 매핑
+    volumes:
+      - mysql_data:/var/lib/mysql  # 데이터 보존을 위한 볼륨
+
+volumes:
+  mysql_data:
+    driver: local  # 로컬 드라이버 사용
