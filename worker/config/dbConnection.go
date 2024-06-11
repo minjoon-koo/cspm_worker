@@ -34,7 +34,9 @@ func AutoMigrate(connection *gorm.DB) {
 	connection.Debug().AutoMigrate(
 		&models.AdGroup{},
 		&models.DirectoryRole{},
+		&models.BackendPool{},
 	)
 	connection.Exec("ALTER TABLE ad_groups CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
 	connection.Exec("ALTER TABLE directory_roles CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
+	connection.Exec("ALTER TABLE backend_pools CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
 }

@@ -9,7 +9,7 @@ import (
 	"worker/models"
 )
 
-var sql string = query.XmlParsher("getAllUsers")
+var sql string = query.IamXmlParsher("getAllUsers")
 
 func SteamQLUserGet(c *fiber.Ctx) error {
 	cmd := exec.Command("steampipe", "query", sql, "--output", "json")

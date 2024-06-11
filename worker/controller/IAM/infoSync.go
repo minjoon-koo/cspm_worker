@@ -10,8 +10,8 @@ import (
 	"worker/models"
 )
 
-var sqlADGroup string = query.XmlParsher("getAllGroup")
-var sqlDirectoryRole string = query.XmlParsher("getDirectory_Role")
+var sqlADGroup string = query.IamXmlParsher("getAllGroup")
+var sqlDirectoryRole string = query.IamXmlParsher("getDirectory_Role")
 
 /*
 AD Group 파싱
@@ -43,8 +43,8 @@ func UpdateAdGroups() {
 	for _, group := range adGroupResponse.Rows {
 		upsertAdGroup(group)
 		delete(existingMap, group.Id)
-
 	}
+
 	for id := range existingMap {
 		deleteGroup(id)
 	}
