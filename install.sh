@@ -22,4 +22,4 @@ go get github.com/gofiber/fiber/v2/middleware/cors
 go get github.com/gofiber/fiber/v2/middleware/logger
 go get github.com/joho/godotenv
 
-go run /app/worker/main.go
+go run /app/worker/main.go &
