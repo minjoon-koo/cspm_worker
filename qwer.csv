@@ -1,0 +1,253 @@
+id,name,backend_pools,backend_settings
+/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw,production-apgw,"[
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/backendAddressPools/standby01-backend"",
+        ""name"": ""standby01-backend"",
+        ""type"": ""W/\""565df0f3-e0c7-42aa-aced-3141722de343\"""",
+        ""properties"": {
+            ""backendAddresses"": [
+                {
+                    ""ipAddress"": ""20.214.216.127""
+                }
+            ]
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/backendAddressPools/production02-backend"",
+        ""name"": ""production02-backend"",
+        ""type"": ""W/\""565df0f3-e0c7-42aa-aced-3141722de343\"""",
+        ""properties"": {
+            ""backendAddresses"": [
+                {
+                    ""ipAddress"": ""20.214.215.235""
+                }
+            ]
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/backendAddressPools/production01-backend"",
+        ""name"": ""production01-backend"",
+        ""type"": ""W/\""565df0f3-e0c7-42aa-aced-3141722de343\"""",
+        ""properties"": {
+            ""backendAddresses"": [
+                {
+                    ""ipAddress"": ""20.249.173.138""
+                }
+            ]
+        },
+        ""provisioning_state"": ""Succeeded""
+    }
+]","[
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/backendHttpSettingsCollection/http-standby"",
+        ""name"": ""http-standby"",
+        ""type"": ""W/\""565df0f3-e0c7-42aa-aced-3141722de343\"""",
+        ""properties"": {
+            ""port"": 80,
+            ""probe"": {
+                ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/probes/prob-http-standby""
+            },
+            ""protocol"": ""Http"",
+            ""requestTimeout"": 300,
+            ""affinityCookieName"": ""ApplicationGatewayAffinity"",
+            ""cookieBasedAffinity"": ""Disabled"",
+            ""pickHostNameFromBackendAddress"": false
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/backendHttpSettingsCollection/http-production"",
+        ""name"": ""http-production"",
+        ""type"": ""W/\""565df0f3-e0c7-42aa-aced-3141722de343\"""",
+        ""properties"": {
+            ""path"": """",
+            ""port"": 80,
+            ""probe"": {
+                ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/probes/prob-http-production""
+            },
+            ""protocol"": ""Http"",
+            ""requestTimeout"": 300,
+            ""affinityCookieName"": ""ApplicationGatewayAffinity"",
+            ""cookieBasedAffinity"": ""Disabled"",
+            ""pickHostNameFromBackendAddress"": false
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/backendHttpSettingsCollection/http-production01"",
+        ""name"": ""http-production01"",
+        ""type"": ""W/\""565df0f3-e0c7-42aa-aced-3141722de343\"""",
+        ""properties"": {
+            ""path"": """",
+            ""port"": 80,
+            ""probe"": {
+                ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/production-apgw/probes/prob-http-production01""
+            },
+            ""protocol"": ""Http"",
+            ""requestTimeout"": 300,
+            ""cookieBasedAffinity"": ""Disabled"",
+            ""pickHostNameFromBackendAddress"": false
+        },
+        ""provisioning_state"": ""Succeeded""
+    }
+]"
+/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw,dev-apgw,"[
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendAddressPools/test01-backend"",
+        ""name"": ""test01-backend"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""backendAddresses"": [
+                {
+                    ""ipAddress"": ""20.249.139.25""
+                }
+            ]
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendAddressPools/test09-backend"",
+        ""name"": ""test09-backend"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""backendAddresses"": [
+                {
+                    ""ipAddress"": ""20.200.227.108""
+                }
+            ]
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendAddressPools/t2-backend"",
+        ""name"": ""t2-backend"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""backendAddresses"": [
+                {
+                    ""ipAddress"": ""20.196.216.184""
+                }
+            ]
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendAddressPools/qa-backend"",
+        ""name"": ""qa-backend"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""backendAddresses"": [
+                {
+                    ""ipAddress"": ""20.214.72.157""
+                }
+            ]
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendAddressPools/stage-backend"",
+        ""name"": ""stage-backend"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""backendAddresses"": [
+                {
+                    ""ipAddress"": ""20.196.232.9""
+                }
+            ]
+        },
+        ""provisioning_state"": ""Succeeded""
+    }
+]","[
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendHttpSettingsCollection/http-test01"",
+        ""name"": ""http-test01"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""path"": """",
+            ""port"": 80,
+            ""probe"": {
+                ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/probes/prob-http-test01""
+            },
+            ""protocol"": ""Http"",
+            ""requestTimeout"": 300,
+            ""affinityCookieName"": ""ApplicationGatewayAffinity"",
+            ""cookieBasedAffinity"": ""Disabled"",
+            ""pickHostNameFromBackendAddress"": false
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendHttpSettingsCollection/http-t2"",
+        ""name"": ""http-t2"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""path"": """",
+            ""port"": 80,
+            ""probe"": {
+                ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/probes/prob-http-t2""
+            },
+            ""protocol"": ""Http"",
+            ""requestTimeout"": 300,
+            ""affinityCookieName"": ""ApplicationGatewayAffinity"",
+            ""cookieBasedAffinity"": ""Disabled"",
+            ""pickHostNameFromBackendAddress"": false
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendHttpSettingsCollection/http-qa"",
+        ""name"": ""http-qa"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""path"": """",
+            ""port"": 80,
+            ""probe"": {
+                ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/probes/prob-http-qa""
+            },
+            ""protocol"": ""Http"",
+            ""requestTimeout"": 300,
+            ""affinityCookieName"": ""ApplicationGatewayAffinity"",
+            ""cookieBasedAffinity"": ""Disabled"",
+            ""pickHostNameFromBackendAddress"": false
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendHttpSettingsCollection/http-stage"",
+        ""name"": ""http-stage"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""path"": """",
+            ""port"": 80,
+            ""probe"": {
+                ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/probes/prob-http-stage""
+            },
+            ""protocol"": ""Http"",
+            ""requestTimeout"": 300,
+            ""affinityCookieName"": ""ApplicationGatewayAffinity"",
+            ""cookieBasedAffinity"": ""Disabled"",
+            ""pickHostNameFromBackendAddress"": false
+        },
+        ""provisioning_state"": ""Succeeded""
+    },
+    {
+        ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/backendHttpSettingsCollection/http-test09"",
+        ""name"": ""http-test09"",
+        ""type"": ""W/\""cf241a4d-bbf0-4f85-aa77-9a199d3364cf\"""",
+        ""properties"": {
+            ""path"": """",
+            ""port"": 80,
+            ""probe"": {
+                ""id"": ""/subscriptions/6c47a347-6277-47ea-bc05-aa9f2afc5ccd/resourceGroups/rg-soldout/providers/Microsoft.Network/applicationGateways/dev-apgw/probes/prob-http-test09""
+            },
+            ""protocol"": ""Http"",
+            ""requestTimeout"": 300,
+            ""affinityCookieName"": ""ApplicationGatewayAffinity"",
+            ""cookieBasedAffinity"": ""Disabled"",
+            ""pickHostNameFromBackendAddress"": false
+        },
+        ""provisioning_state"": ""Succeeded""
+    }
+]"
