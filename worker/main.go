@@ -17,11 +17,13 @@ func main() {
 	db.Connection()
 
 	app := fiber.New()
-	app.Use(cors.New())
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "*",
+	}))
 	app.Use(logger.New())
 	routes.Setup(app)
 	//controller.GetAllUserInfo()
 
-	app.Listen(":30001")
+	app.Listen("0.0.0.0:30001")
 
 }
