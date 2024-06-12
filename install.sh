@@ -15,3 +15,4 @@ powerpipe mod init
 powerpipe mod install github.com/turbot/steampipe-mod-azure-insights
 powerpipe mod install github.com/turbot/steampipe-mod-azure-compliance
 
+chmod +x /path/to/your/app/deploy_script.sh
