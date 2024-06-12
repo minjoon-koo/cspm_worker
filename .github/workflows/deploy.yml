@@ -21,6 +21,6 @@ jobs:
       - name: Deploy to VM
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-          cd /path/to/your/app &&
+          cd /app &&
           git pull origin main &&
           ./deploy_script.sh"
