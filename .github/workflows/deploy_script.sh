@@ -23,4 +23,5 @@ powerpipe mod install github.com/turbot/steampipe-mod-azure-compliance
 
 cd /app/worker
 go build /app/worker/main.go
-./main &
+nohup ./main &
+
