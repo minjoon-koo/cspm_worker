@@ -22,4 +22,5 @@ powerpipe mod install github.com/turbot/steampipe-mod-azure-insights
 powerpipe mod install github.com/turbot/steampipe-mod-azure-compliance
 
 cd /app/worker
-go run main.go
+go build /app/worker/main.go
+./main &
