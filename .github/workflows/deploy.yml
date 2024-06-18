@@ -23,4 +23,5 @@ jobs:
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
           cd /app &&
           git pull origin main &&
-          ./deploy_script.sh"
+          ./deploy_script.sh &&
+          /app/worker/main &"
