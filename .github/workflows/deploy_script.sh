@@ -25,3 +25,4 @@ cd /app/worker
 go build /app/worker/main.go
 nohup ./main &
 
+echo "Deployment script executed successfully"
