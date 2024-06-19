@@ -20,9 +20,9 @@ jobs:
 
       - name: Deploy to VM
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-          cd /app &&
-          git pull origin main &&
-          pkill -f './main' || true &&
-          ./deploy_script.sh 
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            cd /app
+            git pull origin main
+            pkill -f './main' || true
+            ./deploy_script.sh
           EOF
