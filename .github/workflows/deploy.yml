@@ -25,3 +25,4 @@ jobs:
           git pull origin main &&
           pkill -f './main' || true &&
           ./deploy_script.sh 
+          EOF
