@@ -5,13 +5,13 @@ import (
 	"log"
 	"os/exec"
 	db "worker/config"
-	query "worker/config"
 	"worker/models"
 )
 
+/*
 var sqlAzCliAppGatewayHealthCheck string = query.ApgwXmlParsher("azCliAppGatewayHealthCheck")
 var sqlGetAppGateway string = query.ApgwXmlParsher("getAppGateway")
-
+*/
 func AzCliHealthCheck(c *fiber.Ctx) error {
 	var backendPool []models.BackendPool
 	/*
