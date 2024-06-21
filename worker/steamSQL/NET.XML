@@ -16,9 +16,7 @@
             azure_application_gateway,
             jsonb_array_elements(backend_address_pools) as probe
     </Query>
-    <Query name="azCliAppGatewayHealthCheck">
-        az network application-gateway show-backend-health --resource-group rg-soldout --name 
-    </Query>
+    <Query name="azCliAppGatewayHealthCheck">az network application-gateway show-backend-health --resource-group rg-soldout --name </Query>
 
 </Queries>
 

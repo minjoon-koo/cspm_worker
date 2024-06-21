@@ -1,44 +1,34 @@
-package main
+package NET
 
 import (
 	"encoding/json"
-	"fmt"
+	"github.com/gofiber/fiber/v2"
 	"log"
 	"os/exec"
 	db "worker/config"
-	"worker/controller/NET"
+	query "worker/config"
 	"worker/models"
 )
 
-var sql string = "select display_name, id , description, created_date_time, expiration_date_time from azuread_group"
-
-var sql2 string = "select display_name, mail, department, member_of from azuread_user"
-
+// zacmd string
+var sqlAzCliAppGatewayHealthCheck string = query.ApgwXmlParsher("azCliAppGatewayHealthCheck")
+var sqlGetAppGateway string = query.ApgwXmlParsher("getAppGateway")
 var azcmd string = "az network application-gateway show-backend-health --resource-group rg-soldout --name "
 
-func main() {
-	db.Connection()
-
-	aa := NET.HealthInfo()
-	for _, status := range aa {
-		fmt.Printf("AppGateway: %s\n", status.ApgwName)
-		for _, statue := range status.Statues {
-			fmt.Printf("  Address: %s, Health: %s\n", statue.Address, statue.Health)
-		}
-	}
-}
-
+/*
+health check
+1. db query > sync 데이터 확인
+2. cli 요청 > health 상태 확인 > 매핑
+3. 상태 값 리턴
+*/
 var backendStatuses []models.BackendStatus
 
-func info() {
+func HealthInfo(c *fiber.Ctx) error {
 	var backendPool []models.BackendPool
 	db.DB.Select("app_gateway_name").Find(&backendPool)
-
 	appGatewayMap := make(map[string]bool)
+
 	var uniqueBackendPool []models.BackendPool
-
-	//var backendStatuses []models.BackendStatus
-
 	for _, pool := range backendPool {
 		if _, exists := appGatewayMap[pool.AppGatewayName]; !exists {
 			appGatewayMap[pool.AppGatewayName] = true
@@ -48,8 +38,8 @@ func info() {
 
 	for _, pool := range uniqueBackendPool {
 		var statues []models.StatuesResponse
-		fmt.Println(pool.AppGatewayName)
-		cmd := exec.Command("sh", "-c", azcmd+" "+pool.AppGatewayName)
+		//fmt.Println(pool.AppGatewayName)
+		cmd := exec.Command("sh", "-c", sqlAzCliAppGatewayHealthCheck+" "+pool.AppGatewayName)
 		output, err := cmd.CombinedOutput()
 		jsonData := string(output)
 
@@ -101,7 +91,7 @@ func info() {
 					}
 					address, _ := serverMap["address"].(string)
 					health, _ := serverMap["health"].(string)
-					fmt.Printf("Address: %s, Health: %s\n", address, health)
+					//fmt.Printf("Address: %s, Health: %s\n", address, health)
 					statue := models.StatuesResponse{
 						Address: address,
 						Health:  health,
@@ -116,11 +106,12 @@ func info() {
 		}
 		backendStatuses = append(backendStatuses, backendStatus)
 	}
-	for _, status := range backendStatuses {
-		fmt.Printf("AppGateway: %s\n", status.ApgwName)
-		for _, statue := range status.Statues {
-			fmt.Printf("  Address: %s, Health: %s\n", statue.Address, statue.Health)
-		}
-	}
 
+	jsonOutput, err := json.Marshal((backendStatuses))
+	if err != nil {
+		log.Printf("JSON Marshal failed: %v", err)
+	}
+	jsonString := string(jsonOutput)
+
+	return c.SendString(jsonString)
 }

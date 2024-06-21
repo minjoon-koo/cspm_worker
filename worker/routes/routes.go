@@ -13,5 +13,5 @@ func Setup(app *fiber.App) {
 	app.Get("/IAM/", controller.GetAllUserInfo)
 
 	app.Get("/NET/GW", controller.GetAppGatewayInfo)
-	app.Get("/NET/apgw/health", NET.AzCliHealthCheck)
+	app.Get("/NET/GW/health", NET.HealthInfo)
 }
