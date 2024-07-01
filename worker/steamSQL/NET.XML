@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Queries>
-    <Query name="getAppGateway">
-        select
-        display_name, mail, department, member_of
-        from
-        azuread_user
-    </Query>
     <Query name="getBackendName">
         select
             name as apgw_name,
@@ -16,8 +10,43 @@
             azure_application_gateway,
             jsonb_array_elements(backend_address_pools) as probe
     </Query>
+
     <Query name="azCliAppGatewayHealthCheck">az network application-gateway show-backend-health --resource-group rg-soldout --name </Query>
 
+    <Query name="getFirewallPolicy">
+        SELECT
+            name AS apgw_name,
+            CASE
+                WHEN firewall_policy IS NULL THEN json_build_object('id', 'null')
+                ELSE json_build_object('id', (firewall_policy->>'id'))
+            END AS firewall_policy
+        FROM
+            azure_application_gateway;
+    </Query>
+
+    <Query name="getListnerRoll">
+        select
+        collection
+        from
+        azure_application_gateway,
+        jsonb_array_elements(backend_http_settings_collection) as collection
+    </Query>
+
+    <Query name="getFrontendPort">
+        select
+        collection
+        from
+        azure_application_gateway,
+        jsonb_array_elements(backend_http_settings_collection) as collection
+    </Query>
+
+    <Query name="getSSLCertInfo">
+        select
+        collection
+        from
+        azure_application_gateway,
+        jsonb_array_elements(backend_http_settings_collection) as collection
+    </Query>
 </Queries>
 
 

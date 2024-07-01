@@ -1,0 +1,461 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "cdpf7jeygdh4wd"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "color-text"
+            },
+            "filterable": true,
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 3,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.0.0",
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "cdpf7jeygdh4wd"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.*[\"apgw_name]",
+              "language": "jsonpath"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "allList",
+          "urlPath": ""
+        }
+      ],
+      "title": "솔드아웃 게이트웨이 현황",
+      "transformations": [
+        {
+          "id": "groupBy",
+          "options": {
+            "fields": {
+              "apgw_name": {
+                "aggregations": [],
+                "operation": "groupby"
+              },
+              "group by": {
+                "aggregations": [],
+                "operation": "groupby"
+              }
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "cdpf7jeygdh4wd"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "valueName": "last"
+          },
+          "mappings": [
+            {
+              "options": {
+                "1111111": {
+                  "color": "blue",
+                  "index": 1,
+                  "text": "1111111"
+                },
+                "Healthy": {
+                  "color": "semi-dark-green",
+                  "index": 0,
+                  "text": "Healthy"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "blue",
+                "value": 10
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byFrameRefID",
+              "options": "testBackendHealth"
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 19,
+        "w": 10,
+        "x": 3,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "authPassword": "",
+        "authUsername": "",
+        "composites": [],
+        "content": "graph LR\n\nDEVAPGW[dev-apgw] -- route--> WAF1[sec-waf ]\nDEVAPGW --> LT[listner-test01-01]\nDEVAPGW --> LTR[linster-test01-redirect] --> LT\nLT --${test01BackendHealth}--> IT[test01-ingress] \n\nDEVAPGW --> LT9[listner-test09-01]\nDEVAPGW --> LT9R[linster-test09-redirect] --> LT9\nLT9 -- ${test09BackendHealth}--> IT9[test09-ingress] \n\nDEVAPGW --> LT2[listner-t2-01]\nDEVAPGW --> LT2R[linster-test09-redirect] --> LT2\nLT2 --${t2BackendHealth}--> IT2[i2-ingress] \n\nDEVAPGW --> LQ[listner-qa-01]\nDEVAPGW --> LQR[linster-qa-redirect] --> LQ\nLQ --${qaBackendHealth}--> IQ[qa-ingress] \n\nDEVAPGW --> LS[listner-stage-01]\nDEVAPGW --> LST[linster-stage-redirect] --> LS\nLS --${stageBackendHealth}--> IS[stage-ingress]",
+        "legend": {
+          "asTable": true,
+          "displayMode": "table",
+          "gradient": {
+            "enabled": true,
+            "show": true
+          },
+          "hideEmpty": false,
+          "hideZero": false,
+          "placement": "bottom",
+          "show": false,
+          "sortBy": "last",
+          "sortDesc": true,
+          "stats": [
+            "mean",
+            "last",
+            "min",
+            "max",
+            "sum"
+          ]
+        },
+        "maxWidth": true,
+        "mermaidServiceUrl": "",
+        "mermaidThemeVariablesDark": {
+          "classDiagram": {},
+          "common": {
+            "fontFamily": "Roboto,Helvetica Neue,Arial,sans-serif",
+            "lineColor": "orange",
+            "mainBkg": "transparent",
+            "textColor": "text"
+          },
+          "flowChart": {
+            "nodeBorder": "orange"
+          },
+          "sequenceDiagram": {},
+          "stateDiagram": {},
+          "userJourneyDiagram": {}
+        },
+        "mermaidThemeVariablesLight": {
+          "classDiagram": {},
+          "common": {
+            "fontFamily": "Roboto,Helvetica Neue,Arial,sans-serif",
+            "textColor": "transparent"
+          },
+          "flowChart": {
+            "nodeBorder": "transparent"
+          },
+          "sequenceDiagram": {},
+          "stateDiagram": {},
+          "userJourneyDiagram": {}
+        },
+        "metricCharacterReplacements": [],
+        "moddedSeriesVal": 0,
+        "mode": "content",
+        "nodeSize": {
+          "minHeight": 30,
+          "minWidth": 30
+        },
+        "pluginVersion": "",
+        "style": "",
+        "useBackground": false,
+        "useBasicAuth": false,
+        "valueName": "last"
+      },
+      "pluginVersion": "1.10.4",
+      "targets": [
+        {
+          "body": "",
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "cdpf7jeygdh4wd"
+          },
+          "experimentalGroupByField": "health",
+          "experimentalMetricField": "health",
+          "fields": [
+            {
+              "jsonPath": "$.0[\"statues\"].0[\"health\"]",
+              "language": "jsonpath"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "queryParams": "",
+          "refId": "testBackendHealth",
+          "urlPath": ""
+        }
+      ],
+      "title": "dev-apgw 현황",
+      "type": "jdbranham-diagram-panel"
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "Healthy",
+          "value": "Healthy"
+        },
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "cdpf7jeygdh4wd"
+        },
+        "definition": "$.0[\"statues\"].0[\"health\"]",
+        "hide": 0,
+        "includeAll": false,
+        "label": "test01-Backend-Health",
+        "multi": false,
+        "name": "test01BackendHealth",
+        "options": [],
+        "query": {
+          "cacheDurationSeconds": 300,
+          "fields": [
+            {
+              "jsonPath": "$.0[\"statues\"].0[\"health\"]"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "urlPath": ""
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "Healthy",
+          "value": "Healthy"
+        },
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "cdpf7jeygdh4wd"
+        },
+        "definition": "$.0[\"statues\"].1[\"health\"]",
+        "hide": 0,
+        "includeAll": false,
+        "label": "test09-Backend-Health",
+        "multi": false,
+        "name": "test09BackendHealth",
+        "options": [],
+        "query": {
+          "cacheDurationSeconds": 300,
+          "fields": [
+            {
+              "jsonPath": "$.0[\"statues\"].1[\"health\"]"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "urlPath": ""
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "Healthy",
+          "value": "Healthy"
+        },
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "cdpf7jeygdh4wd"
+        },
+        "definition": "$.0[\"statues\"].2[\"health\"]",
+        "hide": 0,
+        "includeAll": false,
+        "label": "t2-Backend-Health",
+        "multi": false,
+        "name": "t2BackendHealth",
+        "options": [],
+        "query": {
+          "cacheDurationSeconds": 300,
+          "fields": [
+            {
+              "jsonPath": "$.0[\"statues\"].2[\"health\"]"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "urlPath": ""
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "Healthy",
+          "value": "Healthy"
+        },
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "cdpf7jeygdh4wd"
+        },
+        "definition": "$.0[\"statues\"].3[\"health\"]",
+        "hide": 0,
+        "includeAll": false,
+        "label": "qa-Backend-Health",
+        "multi": false,
+        "name": "qaBackendHealth",
+        "options": [],
+        "query": {
+          "cacheDurationSeconds": 300,
+          "fields": [
+            {
+              "jsonPath": "$.0[\"statues\"].3[\"health\"]"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "urlPath": ""
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "Healthy",
+          "value": "Healthy"
+        },
+        "datasource": {
+          "type": "marcusolsson-json-datasource",
+          "uid": "cdpf7jeygdh4wd"
+        },
+        "definition": "$.0[\"statues\"].4[\"health\"]",
+        "hide": 0,
+        "includeAll": false,
+        "label": "stage-Backend-Health",
+        "multi": false,
+        "name": "stageBackendHealth",
+        "options": [],
+        "query": {
+          "cacheDurationSeconds": 300,
+          "fields": [
+            {
+              "jsonPath": "$.0[\"statues\"].4[\"health\"]"
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "urlPath": ""
+        },
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timeRangeUpdatedDuringEditOrView": false,
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "APGW",
+  "uid": "adoqsjnltjx8gf",
+  "version": 5,
+  "weekStart": ""
+}

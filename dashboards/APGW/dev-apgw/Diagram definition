@@ -1,0 +1,22 @@
+graph LR
+
+DEVAPGW[dev-apgw] -- route--> WAF1[sec-waf ]
+DEVAPGW --> LT[listner-test01-01]
+DEVAPGW --> LTR[linster-test01-redirect] --> LT
+LT --${test01BackendHealth}--> IT[test01-ingress]
+
+DEVAPGW --> LT9[listner-test09-01]
+DEVAPGW --> LT9R[linster-test09-redirect] --> LT9
+LT9 -- ${test09BackendHealth}--> IT9[test09-ingress]
+
+DEVAPGW --> LT2[listner-t2-01]
+DEVAPGW --> LT2R[linster-test09-redirect] --> LT2
+LT2 --${t2BackendHealth}--> IT2[i2-ingress]
+
+DEVAPGW --> LQ[listner-qa-01]
+DEVAPGW --> LQR[linster-qa-redirect] --> LQ
+LQ --${qaBackendHealth}--> IQ[qa-ingress]
+
+DEVAPGW --> LS[listner-stage-01]
+DEVAPGW --> LST[linster-stage-redirect] --> LS
+LS --${stageBackendHealth}--> IS[stage-ingress]

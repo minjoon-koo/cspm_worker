@@ -3,124 +3,63 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"os/exec"
-	db "worker/config"
-	"worker/controller/NET"
-	"worker/models"
+	query "worker/config"
 )
 
-var sql string = "select display_name, id , description, created_date_time, expiration_date_time from azuread_group"
-
-var sql2 string = "select display_name, mail, department, member_of from azuread_user"
-
-var azcmd string = "az network application-gateway show-backend-health --resource-group rg-soldout --name "
+var sql string = query.ApgwXmlParsher("getFirewallPolicy")
+var url string = "https://portal.azure.com/#@x2soft.onmicrosoft.com/resource"
 
 func main() {
-	db.Connection()
-
-	aa := NET.HealthInfo()
-	for _, status := range aa {
-		fmt.Printf("AppGateway: %s\n", status.ApgwName)
-		for _, statue := range status.Statues {
-			fmt.Printf("  Address: %s, Health: %s\n", statue.Address, statue.Health)
-		}
-	}
-}
-
-var backendStatuses []models.BackendStatus
-
-func info() {
-	var backendPool []models.BackendPool
-	db.DB.Select("app_gateway_name").Find(&backendPool)
-
-	appGatewayMap := make(map[string]bool)
-	var uniqueBackendPool []models.BackendPool
-
-	//var backendStatuses []models.BackendStatus
-
-	for _, pool := range backendPool {
-		if _, exists := appGatewayMap[pool.AppGatewayName]; !exists {
-			appGatewayMap[pool.AppGatewayName] = true
-			uniqueBackendPool = append(uniqueBackendPool, pool)
-		}
+	//db.Connection()
+	cmd := exec.Command("steampipe", "query", sql, "--output", "json")
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		println(string(output))
 	}
 
-	for _, pool := range uniqueBackendPool {
-		var statues []models.StatuesResponse
-		fmt.Println(pool.AppGatewayName)
-		cmd := exec.Command("sh", "-c", azcmd+" "+pool.AppGatewayName)
-		output, err := cmd.CombinedOutput()
-		jsonData := string(output)
+	var result map[string]interface{}
+	err = json.Unmarshal(output, &result)
+	if err != nil {
+		fmt.Println(err)
+	}
 
-		//fmt.Println("Command Output:", jsonData)
-		var result interface{}
-		err = json.Unmarshal([]byte(jsonData), &result)
-		if err != nil {
-			log.Printf("JSON Unmarshal failed: %v", err)
-			continue
-		}
-		// 동적으로 파싱된 JSON 데이터 출력
-		//fmt.Printf("Parsed JSON: %+v\n", result)
+	rows, ok := result["rows"].([]interface{})
+	if !ok {
+		fmt.Println("No rows found")
+	}
 
-		jsonMap, ok := result.(map[string]interface{})
+	dataMap := make(map[string]string)
+	for _, row := range rows {
+		rowMap, ok := row.(map[string]interface{})
 		if !ok {
-			log.Printf("Failed to convert result to map[string]interface{}")
+			fmt.Println("Error: row is not a map")
 			continue
 		}
 
-		backendAddressPools, ok := jsonMap["backendAddressPools"].([]interface{})
+		apgwName, ok := rowMap["apgw_name"].(string)
 		if !ok {
-			log.Printf("Failed to get backendAddressPools")
+			fmt.Println("Error: 'apgw_name' is not a string")
 			continue
 		}
 
-		for _, pool2 := range backendAddressPools {
-			poolMap, ok := pool2.(map[string]interface{})
-			if !ok {
-				continue
-			}
-			backendHttpSettingsCollection, ok := poolMap["backendHttpSettingsCollection"].([]interface{})
-			if !ok {
-				continue
-			}
+		firewallPolicy, ok := rowMap["firewall_policy"].(map[string]interface{})
+		if !ok {
+			fmt.Println("Error: 'firewall_policy' is not a map")
+			continue
+		}
 
-			for _, settings := range backendHttpSettingsCollection {
-				settingsMap, ok := settings.(map[string]interface{})
-				if !ok {
-					continue
-				}
-				servers, ok := settingsMap["servers"].([]interface{})
-				if !ok {
-					continue
-				}
-				for _, server := range servers {
-					serverMap, ok := server.(map[string]interface{})
-					if !ok {
-						continue
-					}
-					address, _ := serverMap["address"].(string)
-					health, _ := serverMap["health"].(string)
-					fmt.Printf("Address: %s, Health: %s\n", address, health)
-					statue := models.StatuesResponse{
-						Address: address,
-						Health:  health,
-					}
-					statues = append(statues, statue)
-				}
-			}
+		id, ok := firewallPolicy["id"].(string)
+		if !ok {
+			fmt.Println("Error: 'id' is not a string")
+			continue
 		}
-		backendStatus := models.BackendStatus{
-			ApgwName: pool.AppGatewayName,
-			Statues:  statues,
-		}
-		backendStatuses = append(backendStatuses, backendStatus)
+		dataMap[apgwName] = id
+		//dataMap[apgwName] = "id"
 	}
-	for _, status := range backendStatuses {
-		fmt.Printf("AppGateway: %s\n", status.ApgwName)
-		for _, statue := range status.Statues {
-			fmt.Printf("  Address: %s, Health: %s\n", statue.Address, statue.Health)
-		}
+
+	for key, value := range dataMap {
+		fmt.Printf("APGW Name: %s, Firewall Policy ID: %s\n", key, value)
 	}
 
 }
