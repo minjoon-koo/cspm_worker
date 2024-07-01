@@ -57,9 +57,9 @@ func ApgwConnectedWaf(c *fiber.Ctx) error {
 		newRow := make(map[string]string)
 		newRow["apgw_name"] = key
 		if value == "null" {
-			newRow["firewallPolicy"] = ""
-			newRow["firewallPolicyName"] = ""
-			newRow["resourceUri"] = ""
+			newRow["firewallPolicy"] = "Null"
+			newRow["firewallPolicyName"] = "Null"
+			newRow["resourceUri"] = "Null"
 		} else {
 			newRow["firewallPolicy"] = value
 			parts := strings.Split(value, "/")
