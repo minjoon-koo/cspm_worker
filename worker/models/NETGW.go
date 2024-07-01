@@ -41,3 +41,16 @@ type BackendStatus struct {
 	ApgwName string            `json:"apgw_name"`
 	Statues  []StatuesResponse `json:"statues"`
 }
+
+/*
+방화벽 정보
+*/
+type WafInformation struct {
+	ApgwName           string `json:"apgw_name"`
+	FirewallPolicyName string `json:"firewall_policy_name"`
+	FirewallResources  string `json:"firewall_resources"`
+	FirewallPolicyID   string `json:"firewall_policy_id" gorm:"primaryKey"`
+}
+type WafInformations struct {
+	WafInfo []WafInformation `json:"waf_info"`
+}
