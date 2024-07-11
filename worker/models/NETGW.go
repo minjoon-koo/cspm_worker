@@ -54,3 +54,39 @@ type WafInformation struct {
 type WafInformations struct {
 	WafInfo []WafInformation `json:"waf_info"`
 }
+
+/*
+frontend 정보
+*/
+type FrontendResponse struct {
+	Rows []FrontendResource `json:"rows"`
+}
+type FrontendResource struct {
+	ApgwName     string `json:"apgw_name"`
+	FrontendName string `json:"frontend_name"`
+	FrontendID   string `json:"frontend_id" gorm:"primaryKey"`
+	Port         string `json:"port"`
+}
+
+/*
+리스너 룰셋
+*/
+type LinserRollResponse struct {
+	Rows []LinserRoll `json:"rows"`
+}
+type LinserRoll struct {
+	ApgwName   string `json:"apgw_name"`
+	Hosts      string `json:"hosts"`
+	LinserName string `json:"linser_name"`
+	PortID     string `json:"port_id" gorm:"primaryKey"`
+}
+
+type LinserRollResualt struct {
+	Rows []LinserRollReplace `json:"rows"`
+}
+type LinserRollReplace struct {
+	ApgwName   string `json:"apgw_name"`
+	Hosts      string `json:"hosts"`
+	LinserName string `json:"linser_name"`
+	Port       string `json:"port"`
+}

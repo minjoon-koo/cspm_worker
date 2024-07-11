@@ -6,8 +6,8 @@ import (
 )
 
 func GetAppGatewayInfo(c *fiber.Ctx) error { //그룹 업데이트
-
 	NET.UpdateAppgatewayBeckend()
+	NET.UpdateFrontendResource()
 	//return c.SendString("{\"url\":\"https://soldout.co.kr\",\"num\":\"80\"}")
 	return c.SendString("{\"num\": {\"WAF1\":\"80\"}}")
 	//return c.SendString("1,2,3,4,5,6")

@@ -24,20 +24,26 @@
             azure_application_gateway;
     </Query>
 
-    <Query name="getListnerRoll">
+    <Query name="getLinserRoll">
         select
-        collection
+            name AS apgw_name,
+            listner -> 'name' AS Linser_Name,
+            listner -> 'properties' ->> 'hostNames' AS hosts,
+            listner -> 'properties' -> 'frontendPort'->>'id' AS PORT_ID
         from
-        azure_application_gateway,
-        jsonb_array_elements(backend_http_settings_collection) as collection
+            azure_application_gateway,
+            jsonb_array_elements(http_listeners) as listner
     </Query>
 
     <Query name="getFrontendPort">
         select
-        collection
+            name AS apgw_name,
+            frontend -> 'name' AS frontend_name,
+            frontend -> 'id' AS frontend_id,
+            frontend -> 'properties' ->>'port' AS port
         from
-        azure_application_gateway,
-        jsonb_array_elements(backend_http_settings_collection) as collection
+            azure_application_gateway,
+            jsonb_array_elements(frontend_ports) as frontend
     </Query>
 
     <Query name="getSSLCertInfo">

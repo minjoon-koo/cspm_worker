@@ -15,4 +15,5 @@ func Setup(app *fiber.App) {
 	app.Get("/NET/GW", controller.GetAppGatewayInfo)
 	app.Get("/NET/GW/health", NET.HealthInfo)
 	app.Get("NET/GW/FW", NET.ApgwConnectedWaf)
+	app.Get("NET/GW/Info", NET.ApgwFrontendInfo)
 }
