@@ -29,9 +29,10 @@ func ApgwFrontendInfo(c *fiber.Ctx) error {
 		if err := db.DB.Select("port").Where("frontend_id = ?", rowData.PortID).First(&frontendResource).Error; err != nil {
 			log.Printf("Failed to find frontend resource: %s", err)
 		} else {
-			continue
+			fmt.Println(rowData)
+			fmt.Println(frontendResource)
+			//continue
 		}
-
 		rowRemake := models.LinserRollReplace{
 			ApgwName:   rowData.ApgwName,
 			Hosts:      rowData.Hosts,
@@ -45,5 +46,6 @@ func ApgwFrontendInfo(c *fiber.Ctx) error {
 	//fmt.Println(linserRollResponse)
 	tmp, _ := json.Marshal(linserRollResualt)
 	fmt.Println(string(tmp))
+
 	return c.JSON(linserRollResualt)
 }
