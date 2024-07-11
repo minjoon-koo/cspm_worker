@@ -43,7 +43,7 @@ func ApgwFrontendInfo(c *fiber.Ctx) error {
 	}
 
 	//fmt.Println(linserRollResponse)
-	tmp, _ := json.Marshal(linserRollResponse)
+	tmp, _ := json.Marshal(linserRollResualt)
 	fmt.Println(string(tmp))
-	return c.JSON(linserRollResponse)
+	return c.JSON(linserRollResualt)
 }
