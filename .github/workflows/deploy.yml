@@ -13,37 +13,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Get GitHub Action IP
-        id: ip
-        uses: haythem/public-ip@v1.2
-
-      - name: Set Azure environment variables
-        run: |
-          echo "AZURE_RESOURCE_GROUP=myResourceGroup" >> $GITHUB_ENV
-          echo "AZURE_NSG_NAME=myNetworkSecurityGroup" >> $GITHUB_ENV
-          echo "AZURE_SUBSCRIPTION_ID=${{ secrets.AZURE_SUBSCRIPTION_ID }}" >> $GITHUB_ENV
-          echo "AZURE_CLIENT_ID=${{ secrets.AZURE_CLIENT_ID }}" >> $GITHUB_ENV
-          echo "AZURE_CLIENT_SECRET=${{ secrets.AZURE_CLIENT_SECRET }}" >> $GITHUB_ENV
-          echo "AZURE_TENANT_ID=${{ secrets.AZURE_TENANT_ID }}" >> $GITHUB_ENV
-
-      - name: Log in to Azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Add GitHub Actions IP to Network Security Group
-        run: |
-          az network nsg rule create --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --nsg-name ${{ env.AZURE_NSG_NAME }} --name GitHubActionsAllowSSH --access Allow --protocol Tcp --direction Inbound --priority 1000 --source-address-prefixes ${{ steps.ip.outputs.ipv4 }}/32 --source-port-ranges '*' --destination-address-prefixes '*' --destination-port-ranges 22
-        env:
-          AZURE_SUBSCRIPTION_ID: ${{ env.AZURE_SUBSCRIPTION_ID }}
-          AZURE_CLIENT_ID: ${{ env.AZURE_CLIENT_ID }}
-          AZURE_CLIENT_SECRET: ${{ env.AZURE_CLIENT_SECRET }}
-          AZURE_TENANT_ID: ${{ env.AZURE_TENANT_ID }}
-
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.6.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Get GitHub Action runner IP
+        id: runner_ip
+        run: |
+          echo "runner_ip=$(curl -s http://checkip.amazonaws.com)" >> $GITHUB_ENV
+
+      - name: Allow GitHub Actions IP in Azure NSG
+        run: |
+          az login --service-principal -u ${{ secrets.AZURE_CLIENT_ID }} -p ${{ secrets.AZURE_CLIENT_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
+          az network nsg rule create \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --nsg-name ${{ secrets.AZURE_NSG_NAME }} \
+            --name AllowGitHubActions \
+            --priority 100 \
+            --source-address-prefixes ${{ env.runner_ip }} \
+            --destination-port-ranges 22 \
+            --access Allow \
+            --protocol Tcp \
+            --direction Inbound
 
       - name: Deploy to VM
         run: |
@@ -54,11 +46,10 @@ jobs:
             ./deploy_script.sh
           EOF
 
-      - name: Remove GitHub Actions IP from Network Security Group
+      - name: Remove GitHub Actions IP from Azure NSG
+        if: always()
         run: |
-          az network nsg rule delete --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --nsg-name ${{ env.AZURE_NSG_NAME }} --name GitHubActionsAllowSSH
-        env:
-          AZURE_SUBSCRIPTION_ID: ${{ env.AZURE_SUBSCRIPTION_ID }}
-          AZURE_CLIENT_ID: ${{ env.AZURE_CLIENT_ID }}
-          AZURE_CLIENT_SECRET: ${{ env.AZURE_CLIENT_SECRET }}
-          AZURE_TENANT_ID: ${{ env.AZURE_TENANT_ID }}
+          az network nsg rule delete \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --nsg-name ${{ secrets.AZURE_NSG_NAME }} \
+            --name AllowGitHubActions
