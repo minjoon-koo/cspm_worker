@@ -16,5 +16,7 @@ func Setup(app *fiber.App) {
 	app.Get("/NET/GW/health", NET.HealthInfo)
 	app.Get("NET/GW/FW", NET.ApgwConnectedWaf)
 	app.Get("NET/GW/Info", NET.ApgwFrontendInfo)
+	//테스트 케이스
 	app.Get("NET/GW/Info/:linserId", NET.ApgwFrontendPort)
+
 }
