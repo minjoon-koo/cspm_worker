@@ -77,6 +77,7 @@ func ApgwFrontendPort(c *fiber.Ctx) error {
 	}
 
 	return c.JSON(fiber.Map{
-		"port": "null",
+		"port": "not found",
 	})
+
 }
