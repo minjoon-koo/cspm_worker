@@ -90,3 +90,16 @@ type LinserRollReplace struct {
 	LinserName string `json:"linser_name"`
 	Port       string `json:"port"`
 }
+
+/*
+프론트엔드 포트
+*/
+type Frontend struct {
+	APGWName   string `json:"apgw_name"`
+	Hosts      string `json:"hosts"`
+	LinserName string `json:"linser_name"`
+	Port       string `json:"port"`
+}
+type Frontends struct {
+	Rows []Frontend `json:"rows"`
+}
