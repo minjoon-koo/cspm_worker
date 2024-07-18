@@ -22,7 +22,7 @@ func ApgwFrontendInfo(c *fiber.Ctx) error {
 	var linserRollResualt models.LinserRollResualt
 
 	if err := json.Unmarshal([]byte(output), &linserRollResponse); err != nil {
-		log.Fatalf("Failed to unmarshal JSON: %s", err)
+		log.Fatalf("(Info/)Failed to unmarshal JSON: %s", err)
 	}
 
 	for _, rowData := range linserRollResponse.Rows {
@@ -62,7 +62,7 @@ func ApgwFrontendPort(c *fiber.Ctx) error {
 
 	var selectResault models.Frontends
 	if err := json.Unmarshal([]byte(totalResault), &selectResault); err != nil {
-		log.Fatalf("Failed to unmarshal JSON: %s", err)
+		log.Fatalf("(/Info/P)Failed to unmarshal JSON: %s", err)
 		return c.Status(500).JSON(fiber.Map{
 			"port": "null",
 		})
