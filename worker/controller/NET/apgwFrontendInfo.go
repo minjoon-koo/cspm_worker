@@ -8,7 +8,6 @@ import (
 	db "worker/config"
 	query "worker/config"
 	"worker/controller/CLI"
-	"worker/controller/HTTP"
 	"worker/models"
 )
 
@@ -50,8 +49,39 @@ func ApgwFrontendInfo(c *fiber.Ctx) error {
 }
 
 func ApgwFrontendPort(c *fiber.Ctx) error {
-	totalResault := HTTP.SendGet("/NET/GW/Info")
+	//totalResault := HTTP.SendGet("/NET/GW/Info")
 	linserId := c.Params("linserId")
+
+	/*임시 totalRes 테스트
+	 */
+	output := CLI.SteampipeQuery(sqlGetLinserRoll)
+
+	var linserRollResponse models.LinserRollResponse
+	var frontendResource models.FrontendResource
+	var linserRollResualt models.LinserRollResualt
+
+	if err := json.Unmarshal([]byte(output), &linserRollResponse); err != nil {
+		log.Fatalf("(Info/temp)Failed to unmarshal JSON: %s", err)
+	}
+
+	for _, rowData := range linserRollResponse.Rows {
+		if err := db.DB.Select("port").Where("frontend_id = ?", rowData.PortID).First(&frontendResource).Error; err != nil {
+			log.Printf("Failed to find frontend resource: %s", err)
+		} else {
+			fmt.Println(rowData)
+			fmt.Println(frontendResource)
+			//continue
+		}
+		rowRemake := models.LinserRollReplace{
+			ApgwName:   rowData.ApgwName,
+			Hosts:      rowData.Hosts,
+			LinserName: rowData.LinserName,
+			Port:       frontendResource.Port,
+		}
+
+		linserRollResualt.Rows = append(linserRollResualt.Rows, rowRemake)
+	}
+	totalResault, _ := json.Marshal(linserRollResualt)
 
 	/*
 		totalResult 값
