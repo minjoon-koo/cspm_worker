@@ -2,51 +2,70 @@ package IAM
 
 import (
 	"encoding/json"
-	"gorm.io/gorm/clause"
 	"log"
 	"os/exec"
+	"sync"
 	db "worker/config"
 	query "worker/config"
 	"worker/models"
+
+	"gorm.io/gorm/clause"
 )
 
 var sqlADGroup string = query.IamXmlParsher("getAllGroup")
 var sqlDirectoryRole string = query.IamXmlParsher("getDirectory_Role")
 
+func runSteampipeQuery(query string, wg *sync.WaitGroup, resultChan chan<- []byte, errChan chan<- error) {
+	defer wg.Done()
+	cmd := exec.Command("steampipe", "query", query, "--output", "json")
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		errChan <- err
+		return
+	}
+	resultChan <- output
+}
+
 /*
 AD Group 파싱
 */
 func UpdateAdGroups() {
-	var adGroupResponse models.AdGroupResponse
-	// Steampipe 쿼리 실행
-	cmd := exec.Command("steampipe", "query", sqlADGroup, "--output", "json")
-	output, err := cmd.CombinedOutput()
-	if err != nil {
-		log.Fatalf("Steampipe query failed: %s", string(output))
-	}
+	var wg sync.WaitGroup
+	resultChan := make(chan []byte)
+	errChan := make(chan error)
 
-	// JSON 파싱
-	//var response models.AdGroupResponse
-	if err := json.Unmarshal(output, &adGroupResponse); err != nil {
-		log.Fatalf("Failed to unmarshal JSON: %s", err)
-	}
+	wg.Add(1)
+	go runSteampipeQuery(sqlADGroup, &wg, resultChan, errChan)
 
-	// 현재 DB의 상태를 캐시
-	var existingGroups []models.AdGroup
-	db.DB.Find(&existingGroups)
-	existingMap := make(map[string]models.AdGroup)
-	for _, group := range existingGroups {
-		existingMap[group.Id] = group
-	}
+	go func() {
+		wg.Wait()
+		close(resultChan)
+		close(errChan)
+	}()
 
-	// 데이터베이스에 업데이트/삽입
-	for _, group := range adGroupResponse.Rows {
-		upsertAdGroup(group)
-		delete(existingMap, group.Id)
-	}
+	select {
+	case output := <-resultChan:
+		var adGroupResponse models.AdGroupResponse
+		if err := json.Unmarshal(output, &adGroupResponse); err != nil {
+			log.Fatalf("Failed to unmarshal JSON: %s", err)
+		}
 
-	for id := range existingMap {
-		deleteGroup(id)
+		var existingGroups []models.AdGroup
+		db.DB.Find(&existingGroups)
+		existingMap := make(map[string]models.AdGroup)
+		for _, group := range existingGroups {
+			existingMap[group.Id] = group
+		}
+
+		for _, group := range adGroupResponse.Rows {
+			upsertAdGroup(group)
+			delete(existingMap, group.Id)
+		}
+		for id := range existingMap {
+			deleteGroup(id)
+		}
+	case err := <-errChan:
+		log.Fatalf("Steampipe query failed: %s", err)
 	}
 }
 
@@ -54,30 +73,41 @@ func UpdateAdGroups() {
 Directory Role
 */
 func UpdateDirectoryRole() {
-	var directoryRoleResponse models.DirectoryRoleResponse
-	cmd := exec.Command("steampipe", "query", sqlDirectoryRole, "--output", "json")
-	output, err := cmd.CombinedOutput()
-	if err != nil {
-		log.Fatalf("Steampipe query failed: %s", string(output))
-	}
+	var wg sync.WaitGroup
+	resultChan := make(chan []byte)
+	errChan := make(chan error)
 
-	if err := json.Unmarshal(output, &directoryRoleResponse); err != nil {
-		log.Fatalf("Failed to unmarshal JSON: %s", err)
-	}
+	wg.Add(1)
+	go runSteampipeQuery(sqlDirectoryRole, &wg, resultChan, errChan)
 
-	var existingGroups []models.DirectoryRole
-	db.DB.Find(&existingGroups)
-	existingMap := make(map[string]models.DirectoryRole)
-	for _, group := range existingGroups {
-		existingMap[group.Id] = group
-	}
-	for _, role := range directoryRoleResponse.Rows {
-		//upsertAdGroup(group)
-		upsertDirectoryRole(role)
-		delete(existingMap, role.Id)
-	}
-	for id := range existingMap {
-		deleteDirectoryRole(id)
+	go func() {
+		wg.Wait()
+		close(resultChan)
+		close(errChan)
+	}()
+
+	select {
+	case output := <-resultChan:
+		var directoryRoleResponse models.DirectoryRoleResponse
+		if err := json.Unmarshal(output, &directoryRoleResponse); err != nil {
+			log.Fatalf("Failed to unmarshal JSON: %s", err)
+		}
+
+		var existingGroups []models.DirectoryRole
+		db.DB.Find(&existingGroups)
+		existingMap := make(map[string]models.DirectoryRole)
+		for _, group := range existingGroups {
+			existingMap[group.Id] = group
+		}
+		for _, role := range directoryRoleResponse.Rows {
+			upsertDirectoryRole(role)
+			delete(existingMap, role.Id)
+		}
+		for id := range existingMap {
+			deleteDirectoryRole(id)
+		}
+	case err := <-errChan:
+		log.Fatalf("Steampipe query failed: %s", err)
 	}
 }
 
